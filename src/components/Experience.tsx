@@ -80,9 +80,7 @@ export function Experience() {
                                 <img
                                   src={job.logo}
                                   alt={`${job.company} logo`}
-                                  className={`h-12 w-12 object-cover sm:h-16 sm:w-16 md:h-20 md:w-20 ${
-                                    job.company === "theScore" ? "scale-[0.85]" : ""
-                                  }`}
+                                  className={`h-12 w-12 object-cover sm:h-16 sm:w-16 md:h-20 md:w-20 ${""}`}
                                   loading="lazy"
                                 />
                               </span>

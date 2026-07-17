@@ -41,7 +41,7 @@ export function Hero() {
                 <div className="animate-ring-spin absolute -inset-3 rounded-full bg-[conic-gradient(from_0deg,transparent,var(--color-accent),transparent_40%,var(--color-primary),transparent_80%)] opacity-60 blur-md" />
                 <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-accent to-primary opacity-60 blur-sm" />
                 <img
-                  src={profileAsset.url}
+                  src={profileAsset}
                   alt={`${portfolio.name}, ${portfolio.title}`}
                   className="relative h-72 w-72 rounded-full border-4 border-background object-cover shadow-xl sm:h-80 sm:w-80 lg:h-96 lg:w-96"
                   loading="eager"
@@ -91,7 +91,7 @@ export function Hero() {
               </div>
               <div className="overflow-hidden rounded-lg border bg-background">
                 <img
-                  src={resumePreviewAsset.url}
+                  src={resumePreviewAsset}
                   alt={`${portfolio.name} resume preview`}
                   className="aspect-[8.5/11] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.015]"
                   loading="lazy"

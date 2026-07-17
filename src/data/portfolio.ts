@@ -60,7 +60,7 @@ export const portfolio: PortfolioData = {
   phone: "(647) 832-7166",
   linkedin: "https://www.linkedin.com/in/Zhu-Owen",
   github: "https://github.com/Zhu-Owen",
-  resumeUrl: resumeAsset.url,
+  resumeUrl: resumeAsset,
   summary:
     "Software engineer with experience across robotics, fintech, e-commerce, and sports media. I specialize in building reliable mobile and backend systems, leading cross-functional initiatives, and driving operational excellence at scale. Currently at Amazon Robotics, I design event-driven microservices and manage the full SDLC for global fleet services.",
   experience: [
@@ -76,7 +76,7 @@ export const portfolio: PortfolioData = {
         "Designed event-driven microservices for robotic fleet management using Kotlin and AWS Lambda, processing high-throughput telemetry via SQS/SNS with idempotent consumers.",
       ],
       link: "https://www.aboutamazon.com/news/tag/robotics",
-      logo: amazonLogo.url,
+      logo: amazonLogo,
     },
     {
       company: "Faire",
@@ -90,7 +90,7 @@ export const portfolio: PortfolioData = {
         "Enhanced the custom MVVM architecture using RxJava to streamline reactive data flows, significantly improving code maintainability for complex retailer workflows.",
       ],
       link: "https://www.faire.com",
-      logo: faireLogo.url,
+      logo: faireLogo,
     },
     {
       company: "Intuit",
@@ -103,7 +103,7 @@ export const portfolio: PortfolioData = {
         "Reduced manual testing time by implementing automated UI tests using Appium, leveraging XCUITest (iOS) and UIAutomator2 (Android) to ensure cross-platform stability.",
       ],
       link: "https://www.intuit.com",
-      logo: intuitLogo.url,
+      logo: intuitLogo,
     },
     {
       company: "theScore",
@@ -115,7 +115,7 @@ export const portfolio: PortfolioData = {
         "Refactored legacy code to remove 5000+ unused lines, reducing module compile times by 10% and improving developer velocity.",
       ],
       link: "https://www.thescore.com",
-      logo: thescoreLogo.url,
+      logo: thescoreLogo,
     },
     {
       company: "Innovapost",
@@ -127,7 +127,7 @@ export const portfolio: PortfolioData = {
         "Strengthened security by implementing AES-256 encryption for credential storage and integrating Android’s Keystore system.",
       ],
       link: "https://www.innovapost.com",
-      logo: canadapostLogo.url,
+      logo: canadapostLogo,
     },
   ],
   projects: [
@@ -136,14 +136,14 @@ export const portfolio: PortfolioData = {
       description:
         "A compiler written from scratch that translates a subset of Java into MIPS assembly. Implements lexical analysis, parsing, semantic checks, and code generation.",
       tags: ["Compilers", "Java", "MIPS", "Parsing", "Code Generation"],
-      github: "https://github.com/Zhu-Owen",
+      github: "https://github.com/Zhu-Owen/Java-Compiler",
     },
     {
       title: "Portfolio Website",
       description:
         "This site — a clean, responsive personal portfolio showcasing my engineering experience, projects, and skills.",
       tags: ["React", "TypeScript", "Tailwind CSS", "TanStack Start"],
-      github: "https://github.com/Zhu-Owen",
+      github: "https://github.com/Zhu-Owen/Portfolio-Website",
     },
     {
       title: "Arclight",
