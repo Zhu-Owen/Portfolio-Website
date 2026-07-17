@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://owenz.com/sitemap.xml
+Sitemap: https://owen-zhu.com/sitemap.xml

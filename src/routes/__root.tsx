@@ -12,6 +12,13 @@ import { type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { portfolio } from "@/data/portfolio";
 
+import { inject } from '@vercel/analytics';
+
+// Safely initialize Vercel Analytics only on the client side (browser)
+if (typeof window !== 'undefined') {
+  inject();
+}
+
 const scrollGuardScript = `
 (() => {
   try {
