@@ -60,7 +60,7 @@ export const portfolio: PortfolioData = {
   phone: "(647) 832-7166",
   linkedin: "https://www.linkedin.com/in/Zhu-Owen",
   github: "https://github.com/Zhu-Owen",
-  resumeUrl: resumeAsset,
+  resumeUrl: "/Owen Zhu Resume.pdf",
   summary:
     "Software engineer with experience across robotics, fintech, e-commerce, and sports media. I specialize in building reliable mobile and backend systems, leading cross-functional initiatives, and driving operational excellence at scale. Currently at Amazon Robotics, I design event-driven microservices and manage the full SDLC for global fleet services.",
   experience: [

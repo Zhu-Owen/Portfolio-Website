@@ -98,12 +98,20 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content: `${portfolio.name} is a ${portfolio.title.toLowerCase()} based in ${portfolio.location}. View experience, projects, and skills.`,
       },
       { name: "author", content: portfolio.name },
+      // Open Graph
       { property: "og:title", content: `${portfolio.name} — ${portfolio.title}` },
       {
         property: "og:description",
         content: `${portfolio.name} is a ${portfolio.title.toLowerCase()} based in ${portfolio.location}. View experience, projects, and skills.`,
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://owen-zhu.com/" },
+      { property: "og:image", content: "https://owen-zhu.com/og-image.png" },
+      // Twitter
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: `${portfolio.name} — ${portfolio.title}` },
+      { name: "twitter:description", content: `${portfolio.name} is a ${portfolio.title.toLowerCase()} based in ${portfolio.location}. View experience, projects, and skills.` },
+      { name: "twitter:image", content: "https://owen-zhu.com/og-image.png" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -120,7 +128,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/favicon.png", type: "image/x-icon" },
     ],
   }),
   shellComponent: RootShell,
