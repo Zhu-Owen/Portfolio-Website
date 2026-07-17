@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://id-preview--775175e2-04d5-42d8-8e60-22bb14a615ee.lovable.app/sitemap.xml
+Sitemap: https://owenz.com/sitemap.xml

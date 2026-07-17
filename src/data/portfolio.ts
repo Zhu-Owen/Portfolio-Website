@@ -1,9 +1,9 @@
-import resumeAsset from "@/assets/owen-zhu-resume.pdf.asset.json";
-import amazonLogo from "@/assets/amazon.png.asset.json";
-import faireLogo from "@/assets/faire.png.asset.json";
-import intuitLogo from "@/assets/intuit.png.asset.json";
-import thescoreLogo from "@/assets/thescore.png.asset.json";
-import canadapostLogo from "@/assets/canadapost.png.asset.json";
+import resumeAsset from "@/assets/Owen Zhu Resume.pdf";
+import amazonLogo from "@/assets/amazon.png";
+import faireLogo from "@/assets/faire.png";
+import intuitLogo from "@/assets/intuit.png";
+import thescoreLogo from "@/assets/thescore.png";
+import canadapostLogo from "@/assets/canadapost.png";
 
 export interface Experience {
   company: string;
