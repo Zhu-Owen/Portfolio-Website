@@ -1,0 +1,32 @@
+1. How to Update Your Resume
+
+Since you moved the file to the /public folder, the process is very simple:
+
+Prepare the new file: Ensure your updated resume PDF is named exactly Owen Zhu Resume.pdf (to match the name your code expects for the download attribute).
+
+Replace the file: Go to your project’s /public folder and overwrite the old Owen Zhu Resume.pdf with the new version.
+
+Update metadata (if necessary): If you want to change the date inside the resume, just ensure the filename stays the same.
+
+No code changes needed: Because you are using a static path (/Owen Zhu Resume.pdf) and the download attribute in your component, the link will automatically serve the new file.
+
+2. How to Update Your OG Image
+If you ever want to change the banner that appears on Twitter/LinkedIn: Prepare the image: Create a new image and ensure it is exported at 1200 x 630 pixels.  Replace the file: Save this new image as og-image.png and place it in the /public folder, replacing the existing one.
+
+Clear the cache: This is the most important step! Because social media platforms cache images, you must go to the LinkedIn Post Inspector or the Twitter Card Validator, paste your domain ([https://owen-zhu.com/](https://owen-zhu.com/)), and click "Preview" or "Scrape" to force them to see your new image.
+
+3. Deployment
+
+Whenever you make these changes:
+
+Commit the changes: git add . then git commit -m "Update resume/image"
+Push to GitHub: git push
+Vercel: Vercel will automatically detect the changes in the /public folder and redeploy your site. 
+
+You do not need to do anything else!
+
+Quick Maintenance Checklist:  
+
+Audit links: Click your resume download button and social links to ensure they still work.  
+Check Analytics: Log into your Vercel dashboard to verify traffic is still being tracked.  
+Domain: Ensure your domain registration for owen-zhu.com is active so your site doesn't go offline.  
