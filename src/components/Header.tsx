@@ -23,7 +23,8 @@ export function Header() {
     >
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
         <a
-          href="#"
+          href="/"
+          onClick={(event) => scrollToAnchor(event, "#")}
           className="font-heading text-lg font-bold tracking-tight text-foreground"
         >
           {portfolio.name}

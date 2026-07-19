@@ -9,90 +9,13 @@ const sections = [
   { id: "contact", label: "Contact" },
 ];
 
-const sectionProgressBootScript = `
-(() => {
-  if (window.__sectionProgressBooted) return;
-  window.__sectionProgressBooted = true;
-
-  const sections = ["about", "experience", "projects", "skills", "education", "contact"];
-  let lockedSection = null;
-
-  const setActive = (id) => {
-    document.documentElement.dataset.activeSection = id;
-  };
-
-  const getScrollMarginTop = (element) => {
-    return Number.parseFloat(window.getComputedStyle(element).scrollMarginTop) || 0;
-  };
-
-  const getActiveSection = () => {
-    const maxScrollTop = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
-
-    if (window.scrollY >= maxScrollTop - 4) {
-      return sections[sections.length - 1];
-    }
-
-    const indicatorLine = Math.min(window.innerHeight * 0.28, 280);
-    let activeSection = sections[0];
-
-    for (const id of sections) {
-      const element = document.getElementById(id);
-      if (!element) continue;
-      if (element.getBoundingClientRect().top > indicatorLine) break;
-      activeSection = id;
-    }
-
-    return activeSection;
-  };
-
-  const updateActiveSection = () => {
-    if (lockedSection) {
-      const target = document.getElementById(lockedSection);
-      if (target && Math.abs(target.getBoundingClientRect().top - getScrollMarginTop(target)) > 8) {
-        setActive(lockedSection);
-        return;
-      }
-      lockedSection = null;
-    }
-
-    setActive(getActiveSection());
-  };
-
-  const clearProgrammaticLock = () => {
-    lockedSection = null;
-    updateActiveSection();
-  };
-
-  const nav = document.currentScript?.closest("nav");
-  nav?.addEventListener("click", (event) => {
-    const link = event.target instanceof Element ? event.target.closest("a[href^='#']") : null;
-    if (!link) return;
-
-    const id = link.getAttribute("href")?.slice(1);
-    const target = id ? document.getElementById(id) : null;
-    if (!id || !target) return;
-
-    event.preventDefault();
-    lockedSection = id;
-    setActive(id);
-    window.history.replaceState(null, "", "#" + id);
-    target.scrollIntoView({ behavior: "smooth", block: "start" });
-  });
-
-  updateActiveSection();
-  window.addEventListener("scroll", updateActiveSection, { passive: true });
-  window.addEventListener("resize", updateActiveSection);
-  window.addEventListener("load", updateActiveSection);
-  window.addEventListener("wheel", clearProgrammaticLock, { passive: true });
-  window.addEventListener("touchstart", clearProgrammaticLock, { passive: true });
-  window.addEventListener("keydown", clearProgrammaticLock);
-  document.fonts?.ready.then(updateActiveSection).catch(() => undefined);
-})();
-`;
-
 export function SectionProgress() {
   const [activeSection, setActiveSection] = useState(sections[0].id);
   const lockedSectionRef = useRef<string | null>(null);
+
+  useLayoutEffect(() => {
+    document.documentElement.dataset.activeSection = activeSection;
+  }, [activeSection]);
 
   useLayoutEffect(() => {
     let resizeObserver: ResizeObserver | null = null;
@@ -170,7 +93,6 @@ export function SectionProgress() {
       aria-label="Section progress"
       className="fixed right-4 top-1/2 z-40 hidden -translate-y-1/2 flex-col items-center gap-3 lg:flex"
     >
-      <script dangerouslySetInnerHTML={{ __html: sectionProgressBootScript }} />
       <div
         aria-hidden="true"
         className="absolute inset-y-4 left-1/2 z-0 w-px -translate-x-1/2 bg-primary/20"

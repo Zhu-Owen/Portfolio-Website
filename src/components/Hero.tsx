@@ -81,7 +81,7 @@ export function Hero() {
           <div className="hero-rise flex items-center justify-center lg:justify-end" style={{ "--hero-delay": "250ms" } as CSSProperties}>
             <a
               href={portfolio.resumeUrl}
-              download="Owen Zhu Resume.pdf"
+              download="Owen-Zhu-Software-Engineer-Resume.pdf"
               aria-label={`${portfolio.name} resume PDF download`}
               className="group block w-full max-w-md rounded-xl border bg-card p-3 text-left shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring lg:max-w-lg"
             >

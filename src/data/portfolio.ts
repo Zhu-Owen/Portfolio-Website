@@ -1,4 +1,3 @@
-import resumeAsset from "@/assets/Owen Zhu Resume.pdf";
 import amazonLogo from "@/assets/amazon.png";
 import faireLogo from "@/assets/faire.png";
 import intuitLogo from "@/assets/intuit.png";
@@ -33,7 +32,6 @@ export interface PortfolioData {
   title: string;
   location: string;
   email: string;
-  phone: string;
   linkedin: string;
   github: string;
   resumeUrl: string;
@@ -57,10 +55,9 @@ export const portfolio: PortfolioData = {
   title: "Software Engineer",
   location: "Toronto, ON",
   email: "owen.zhu2012@gmail.com",
-  phone: "(647) 832-7166",
   linkedin: "https://www.linkedin.com/in/Zhu-Owen",
   github: "https://github.com/Zhu-Owen",
-  resumeUrl: "/Owen Zhu Resume.pdf",
+  resumeUrl: "/Owen-Zhu-Software-Engineer-Resume.pdf",
   summary:
     "Software engineer with experience across robotics, fintech, e-commerce, and sports media. I specialize in building reliable mobile and backend systems, leading cross-functional initiatives, and driving operational excellence at scale. Currently at Amazon Robotics, I design event-driven microservices and manage the full SDLC for global fleet services.",
   experience: [
